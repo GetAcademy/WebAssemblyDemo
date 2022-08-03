@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/wabt/index.js"></script>
+</head>
+
+<body>
+    <script>
+        run();
+
+        async function run() {
+            const filename = 'demo1.wat';
+            const features = {};
+            const wabt = await WabtModule();
+            const response = await fetch(filename);
+            const code = await response.text();
+            const module = wabt.parseWat(filename, code);
+            module.resolveNames();
+            module.validate(features);
+            var binaryOutput = module.toBinary({log: true, write_debug_names:true});
+            let wasm = new WebAssembly.Module(binaryOutput.buffer);
+            const instance = await WebAssembly.instantiate(wasm);
+            console.log(instance.exports.helloWorld());
+        }
+    </script>
+</body>
+
+</html>

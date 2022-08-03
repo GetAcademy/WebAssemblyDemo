@@ -13,7 +13,7 @@
         run();
 
         async function run() {
-            const response = await fetch('test1.wasm');
+            const response = await fetch('demo1.wasm');
             const buffer = await response.arrayBuffer();
             const module = await WebAssembly.compile(buffer);
             const instance = await WebAssembly.instantiate(module);
