@@ -15,7 +15,11 @@
    wasm-decompile decompiles a wasm binary into readable C-like syntax.
    ```
 - Hvordan bruke WebAssembly-funksjoner fra JavaScript?
+- Hvorfor WebAssembly?
+  - Raskt
+  - Andre språk kan kompileres til WebAssembly
 - Lenker
-  - [blog.scottlogic.com/2018/04/26/webassembly-by-hand.html](https://blog.scottlogic.com/2018/04/26/webassembly-by-hand.html)
-  - [webassembly.github.io/wabt/demo/wat2wasm](https://webassembly.github.io/wabt/demo/wat2wasm)
-  - [developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format](https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format)
+  - [Sample code](https://github.com/eliben/wasm-wat-samples)
+  - [Understanding the text format](https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format)
+  - [WebAssembly by hand](https://blog.scottlogic.com/2018/04/26/webassembly-by-hand.html)
+  - [WABT interaktiv demo](https://webassembly.github.io/wabt/demo/wat2wasm)
