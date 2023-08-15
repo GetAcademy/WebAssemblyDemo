@@ -1,10 +1,9 @@
 
-- Hva er WebAssembly?
- - [en.wikipedia.org/wiki/WebAssembly](https://en.wikipedia.org/wiki/WebAssembly)
+ - Hva er WebAssembly?
+  - [en.wikipedia.org/wiki/WebAssembly](https://en.wikipedia.org/wiki/WebAssembly)
 - Et første program i WebAssembly Text Languages (`.wat`)
-
 - Hvordan kompilere WebAssembly?
- - [www.npmjs.com/package/wabt](https://www.npmjs.com/package/wabt)
+  - [www.npmjs.com/package/wabt](https://www.npmjs.com/package/wabt)
  - node_modules/wabt/wat2wasm demo1.wat
  - 
    ```
