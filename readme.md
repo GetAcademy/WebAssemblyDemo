@@ -6,15 +6,14 @@
   - [www.npmjs.com/package/wabt](https://www.npmjs.com/package/wabt)
   - `npx -p wabt wat2wasm demo1.wat`
   - `node .\node_modules\wabt\bin\wat2wasm demo1.wat -o demo1.wasm`
-  - 
-   ```
-   wasm2wat translates from WebAssembly binary format to text format.
-   wat2wasm translates from WebAssembly text format to binary format.
-
-   wasm2c converts a WebAssembly binary file to a C source and header.
-   wasm-decompile decompiles a wasm binary into readable C-like syntax.
-   ```
-- Hvordan bruke WebAssembly-funksjoner fra JavaScript?
+  - ```
+    wasm2wat translates from WebAssembly binary format to text format.
+    wat2wasm translates from WebAssembly text format to binary format.
+ 
+    wasm2c converts a WebAssembly binary file to a C source and header.
+    wasm-decompile decompiles a wasm binary into readable C-like syntax.
+    ```
+- Hvordan bruke WebAssembly-funksjoner fra JavaScript? Demo 1-6
 - Hvorfor WebAssembly?
   - Raskt
   - Andre språk kan kompileres til WebAssembly
