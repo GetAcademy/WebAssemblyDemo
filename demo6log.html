@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        run();
+
+        async function run() {
+            var memory = new WebAssembly.Memory({ initial: 1 });
+
+            function consoleLogString(offset, length) {
+                var bytes = new Uint8Array(memory.buffer, offset, length);
+                var string = new TextDecoder('utf8').decode(bytes);
+                console.log(string);
+            };
+
+            var importObject = {
+                console: {
+                    log: consoleLogString
+                },
+                js: {
+                    mem: memory
+                }
+            };
+
+            let obj = await WebAssembly.instantiateStreaming(fetch('demo6log.wasm'), importObject);
+            obj.instance.exports.helloWorld();
+        }
+    </script>
+</body>
+
+</html>
