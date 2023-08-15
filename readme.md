@@ -4,12 +4,14 @@
 - Et første program i WebAssembly Text Languages (`.wat`)
 - Hvordan kompilere WebAssembly?
   - [www.npmjs.com/package/wabt](https://www.npmjs.com/package/wabt)
-  - node_modules/wabt/wat2wasm demo1.wat
+  - `npx -p wabt wat2wasm demo1.wat`
+  - `node .\node_modules\wabt\bin\wat2wasm demo1.wat -o demo1.wasm`
   - 
    ```
-   wasm2c converts a WebAssembly binary file to a C source and header.
    wasm2wat translates from WebAssembly binary format to text format.
    wat2wasm translates from WebAssembly text format to binary format.
+
+   wasm2c converts a WebAssembly binary file to a C source and header.
    wasm-decompile decompiles a wasm binary into readable C-like syntax.
    ```
 - Hvordan bruke WebAssembly-funksjoner fra JavaScript?
