@@ -29,7 +29,8 @@
             }
 
             // Convert the memory bytes to a JavaScript string
-            const stringValue = new TextDecoder().decode(memoryView.slice(offset, end));
+            const stringValue = new TextDecoder()
+                .decode(memoryView.slice(offset, end));
 
             // Print the string
             console.log(stringValue);

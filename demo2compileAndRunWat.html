@@ -22,7 +22,7 @@
             const module = wabt.parseWat(filename, code);
             module.resolveNames();
             module.validate(features);
-            var binaryOutput = module.toBinary({log: true, write_debug_names:true});
+            var binaryOutput = module.toBinary({ log: true, write_debug_names: true });
             let wasm = new WebAssembly.Module(binaryOutput.buffer);
             const instance = await WebAssembly.instantiate(wasm);
             console.log(instance.exports.helloWorld());

@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <h1>Pause til 10:55</h1>
+
     <script>
         run();
 
@@ -18,6 +20,15 @@
             const module = await WebAssembly.compile(buffer);
             const instance = await WebAssembly.instantiate(module);
             console.log(instance.exports.fivePlusSixTimesSeven());
+        }
+
+        function a(){
+            b();
+        }
+        function b(){
+            c();
+        }
+        function c(){
         }
     </script>
 </body>
